@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ct.mapper.RegisterMapper">
+
+<!--    //通过挂号等级ID获取挂号的-->
+<!--    public BigDecimal getLevelRegFee(int regID)-->
+
+    <select id="getRegLevelFee" resultType="java.math.BigDecimal">
+        SELECT reglevel.fee
+        FROM reglevel
+        WHERE reglevel.id = #{regID}
+    </select>
+
+    <!--    public Patient getPatient(int id);  -->
+
+    <select id="getPatient" resultType="com.ct.entity.Patient">
+        SELECT *
+        FROM patient
+        WHERE patient.medRecID = #{medRecID}
+    </select>
+
+<!--    public Patient getPatientByIdentity(String identityID);-->
+
+    <select id="getPatientByIdentity" resultType="com.ct.entity.Patient">
+        SELECT *
+        FROM patient
+        WHERE patient.identityID = #{identityID}
+    </select>
+
+<!--    public int newPatient(Patient patient);-->
+    <insert id="newPatient" keyProperty="medRecID" useGeneratedKeys="true" parameterType="com.ct.entity.Patient">
+        INSERT INTO patient(patient.name,patient.sex,patient.age,patient.birthDate,patient.address,patient.identityID)
+        VALUES (#{name},#{sex},#{age},#{birthDate},#{address},#{identityID})
+
+    </insert>
+
+<!--    //通过身份证获取病历号-->
+<!--    public int getMedRecIDByIdentity(String identityID);-->
+    <select id="getMedRecIDByIdentity" resultType="integer">
+        SELECT patient.medRecID
+        FROM patient
+        WHERE patient.identityID = #{identityID}
+    </select>
+
+<!--    public RegInfoData addSomeRegInfo(String doc_name,String dept_name);-->
+    <select id="addSomeRegInfo" resultMap="getSomeRegInfo">
+        SELECT u.id u_id,d.id d_id,r.id r_id,r.fee r_fee
+        FROM hisuser u,department d,reglevel r
+        WHERE u.deptID = d.id AND u.regLevelID = r.id AND u.`name`=#{doc_name} AND d.`name`=#{dept_name}
+    </select>
+    <resultMap id="getSomeRegInfo" type="com.ct.entity.RegInfo">
+        <result column="u_id" property="docID" />
+        <result column="d_id" property="deptID"/>
+        <result column="r_id" property="regLevelID"/>
+        <result column="r_fee" property="regFee"/>
+    </resultMap>
+
+
+<!--    //挂号-->
+<!--    public int insertRegInfo(RegInfoData regInfoData);-->
+    <insert id="insertRegInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO reginfo(reginfo.medRecID,reginfo.docID,reginfo.deptID,reginfo.regLevelID,reginfo.regTime,reginfo.operatorID,reginfo.status,reginfo.diagTime,reginfo.noonType,reginfo.isNeedBook,reginfo.regFee)
+        VALUES (#{medRecID},#{docID},#{deptID},#{regLevelID},CURRENT_DATE ,#{operatorID},#{status},#{diagTime},#{noonType},#{isNeedBook},#{regFee})
+    </insert>
+
+<!--    //显示所有医生 userType=3-->
+<!--    public List<String> getAllDoc();-->
+    <select id="getAllDoc" resultType="map">
+        SELECT h.name,h.id
+        FROM hisuser h
+        WHERE h.userType =3 AND h.isDuty=1
+    </select>
+
+
+<!--    //显示所有的科室-->
+<!--    public List<String> getAllDept();-->
+    <select id="getAllDept" resultType="map">
+        SELECT d.name,d.id
+        FROM department d
+        WHERE d.deptType = 1
+    </select>
+
+<!--    /显示所有的挂号等级-->
+<!--    public List<String> getAllRegLevel();-->
+
+    <select id="getAllRegLevel" resultType="map">
+        SELECT reglevel.name,reglevel.id
+        FROM reglevel
+    </select>
+
+<!--    /选择科室后显示对应在值班的医生-->
+<!--    public List<Object> getDocsByDeptName(String name);-->
+    <select id="getDocsByDeptName" resultType="map">
+        SELECT h.name,h.id
+        FROM department d ,hisuser h
+        WHERE d.deptType = 1 AND h.deptID = d.id AND h.userType=3 AND h.isDuty=1 AND d.name = #{name}
+    </select>
+
+</mapper>

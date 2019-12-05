@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ct.mapper.PrescribeMapper">
+
+
+    <select id="getAl2lDrugs" resultType="com.ct.entity.Drugs">
+        SELECT *
+        FROM drugs
+    </select>
+
+    <select id="getAllDrugs" resultMap="allDrugs">
+       SELECT d.`CODE` a,d.drugCode c,d.format d,d.id e,d.manufacter f,d.`name` g,d.price h,d.setupTime i,d.unit k,c1.constantName dosage,c2.constantName type
+        FROM constantitem c1,constantitem c2,drugs d
+        WHERE c1.id =d.dosageID AND c2.id = d.typeID
+    </select>
+    <resultMap id="allDrugs" type="map">
+        <result column="a" property="CODE" />
+        <result column="c" property="drugCode"/>
+        <result column="d" property="format"/>
+        <result column="e" property="id"/>
+        <result column="f" property="manufacter" />
+        <result column="g" property="name"/>
+        <result column="h" property="price"/>
+        <result column="i" property="setupTime"/>
+        <result column="k" property="unit"/>
+        <result column="dosage" property="dosage"/>
+        <result column="type" property="type"/>
+
+    </resultMap>
+
+    <select id="getPrescribe" resultType="map">
+        SELECT *
+        FROM prescription p
+        WHERE p.regID = #{regID} AND (p.status="暂存" OR p.`status` = "已开立")
+    </select>
+
+    <update id="delPrescribe">
+       UPDATE prescription
+        SET prescription.`status` = "已删除"
+        WHERE prescription.id = #{id}
+    </update>
+
+    <update id="subPrescribe">
+       UPDATE prescription
+        SET prescription.`status` = "已开立"
+        WHERE prescription.id = #{id}
+    </update>
+
+    <update id="trashPrescribe">
+       UPDATE prescription
+        SET prescription.`status` = "已作废"
+        WHERE prescription.id = #{id}
+    </update>
+
+    <insert id="addPrescription" parameterType="com.ct.entity.Prescribe" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO prescription(prescription.MRID,prescription.regID,prescription.openDocID,prescription.preName,prescription.openTime,prescription.type,prescription.status)
+        VALUES (#{mrid},#{regID},#{openDocID},#{preName},CURRENT_DATE ,#{type},#{status})
+    </insert>
+
+<!--    //获取患者处方明细
+    public List<Object> getPrescribeDetails(int presID);-->
+
+    <select id="getPrescribeDetails" resultType="map">
+        SELECT *
+        FROM predetail pd NATURAL INNER JOIN drugs d
+        WHERE pd.patientpreID =#{presID} AND (pd.status="暂存" OR pd.status = "已开立")
+    </select>
+
+
+<!--    public PresDetails addPreDetails(PresDetails)-->
+    <insert id="addPreDetails" useGeneratedKeys="true" parameterType="com.ct.entity.PresDetails" keyProperty="id">
+        INSERT INTO predetail(predetail.patientpreID,predetail.drugID,predetail.useWay,predetail.dosage,predetail.frequency,predetail.number,predetail.status,predetail.type)
+        VALUES (#{patientpreID},#{drugID},#{useWay},#{dosage},#{frequency},#{number},#{status},#{type})
+    </insert>
+
+<!--    更改药品明细状态-->
+    <update id="changePreDetailStatus">
+        UPDATE predetail SET predetail.status = #{status}
+        WHERE predetail.patientpreID = #{id}
+    </update>
+
+
+
+
+
+
+</mapper>

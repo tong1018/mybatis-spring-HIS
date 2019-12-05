@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ct.mapper.ChargeMapper">
+<!-- public long addInvoice(@Param("invoice")Invoice invoice);-->
+
+<!--    插入新的发票-->
+    <insert id="addInvoice"  useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO invoice(invoice.invoiceCode,invoice.account,invoice.status,invoice.operationTime,invoice.operatorID,invoice.medRecID,invoice.checkStatus)
+        VALUES (#{invoiceCode},#{account},#{status},CURRENT_DATE ,#{operatorID},#{medRecID},#{checkStatus})
+    </insert>
+
+
+
+<!--    更改消费明细状态-->
+    <update id="changeStatus">
+        UPDATE charges SET charges.status = #{status}
+        WHERE charges.id = #{id}
+    </update>
+
+<!--    插入新的消费明细-->
+    <insert id="addCharges" keyProperty="id" useGeneratedKeys="true" parameterType="com.ct.entity.Charges">
+        INSERT INTO charges(charges.regID,charges.prescriptionID,charges.itemType,charges.name,charges.price,charges.number,charges.deptID,charges.setupTime,charges.openerID,charges.operationTime,charges.backFeeFlag,charges.status,charges.medRecID)
+        VALUES (#{regID},#{prescriptionID},#{itemType},#{name},#{price},#{number},#{deptID},CURRENT_DATE,#{openerID},CURRENT_DATE ,#{backFeeFlag},#{status},#{medRecID})
+    </insert>
+
+    <select id="getPatientAllCharges" resultType="map">
+        SELECT charges.id,charges.medRecID,charges.regID,patient.name name,charges.name itemName,charges.price,charges.number,charges.status,charges.setupTime
+        FROM charges,patient
+        WHERE charges.medRecID = #{medRecID} AND charges.status = "已开立" AND patient.medRecID = charges.medRecID
+    </select>
+
+    <select id="countPrice" resultType="string">
+        SELECT SUM(charges.number*charges.price)
+        FROM charges
+        WHERE charges.medRecID = #{medRecID} AND charges.status = "已开立"
+    </select>
+
+    <update id="updateCharge">
+        UPDATE charges SET charges.status = #{status},charges.inVoiceID = #{inVoiceID},charges.operatorID = #{operatorID},charges.operationTime = CURRENT_DATE
+        WHERE charges.id = #{chargeID}
+    </update>
+</mapper>
