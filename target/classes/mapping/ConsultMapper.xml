@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ct.mapper.ConsultMapper">
+<!--    //获取医生当天未完毕的患者-->
+<!--    public List<Object> getNonConsultPatients(int docID);-->
+    <select id="getNonConsultPatients" resultType="map">
+        SELECT p.medRecID,p.name,p.sex,p.age,r.id regID,r.status
+        FROM reginfo r,patient p
+        WHERE r.medRecID = p.medRecID AND r.docID = #{docID} AND r.diagTime = CURRENT_DATE AND (r.status = 2 OR r.status = 1)
+    </select>
+
+    <resultMap id="doc_patientList" type="map">
+
+    </resultMap>
+
+<!--    //获取医生当天就诊完毕的患者-->
+<!--    public List<Object> getConsultedPatients(int docID);-->
+    <select id="getConsultedPatients" resultType="map">
+        SELECT p.medRecID,p.name,p.sex,p.age,r.id regID,r.status
+        FROM reginfo r,patient p
+        WHERE r.medRecID = p.medRecID AND r.docID = #{docID} AND r.diagTime = CURRENT_DATE AND r.status = 3
+    </select>
+
+<!--     //添加病历首页信息
+    public int addHrHomePage(HrHomePageModel hrHomePageModel);-->
+    <insert id="addHrHomePage" parameterType="com.ct.entity.HrHomePage" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO mrhomepage(mrhomepage.MRID,mrhomepage.regID,mrhomepage.chiefComplaint,mrhomepage.presentIllness,mrhomepage.presentTreatment,mrhomepage.pastHistory,mrhomepage.allergyHistory,mrhomepage.physicalExam,mrhomepage.MRStatus,mrhomepage.docID)
+        VALUES (#{MRID},#{regID},#{chiefComplaint},#{presentIllness},#{presentTreatment},#{pastHistory},#{allergyHistory},#{physicalExam},#{MRStatus},#{docID})
+    </insert>
+<!--     public int changeHomePage(HrHomePage hrHomePage);-->
+    <update id="changeHomePage">
+        UPDATE mrhomepage
+        SET mrhomepage.MRID=#{MRID},mrhomepage.regID=#{regID},mrhomepage.chiefComplaint=#{chiefComplaint},mrhomepage.presentIllness=#{presentIllness},mrhomepage.presentTreatment=#{presentTreatment},mrhomepage.pastHistory=#{pastHistory},mrhomepage.allergyHistory=#{allergyHistory},mrhomepage.physicalExam={physicalExam},mrhomepage.MRStatus={MRStatus}
+        WHERE mrhomepage.id = #{id}
+    </update>
+
+<!--    public void patientToConsulted(int regID);-->
+    <update id="patientToConsulted">
+        UPDATE reginfo SET reginfo.status = 3
+        WHERE reginfo.id = #{regID}
+    </update>
+
+</mapper>

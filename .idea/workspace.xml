@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b52c5968-1668-4c7e-9bbf-0bf36979a7db" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\Program\Maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx1024m -Xmx2048m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1Q1n2qDXMmh1Q0nJnJXH4JV2OtU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.ct.service.implement" />
+      <recent name="com.ct.config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ct.advice" />
+      <recent name="com.ct.exception" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ChenTong\Desktop\demo\mybatis-spring\src\main\resources\mapping" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MybatisSpringApplication">
+    <configuration name="TokenUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ct.utils.TokenUtil" />
+      <module name="mybatis-spring-HIS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ct.result.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ct.test" />
+      <module name="mybatis-spring-HIS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ct.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mybatis-spring-HIS" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ct.MybatisSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.TokenUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b52c5968-1668-4c7e-9bbf-0bf36979a7db" name="Default Changelist" comment="" />
+      <created>1563891748535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563891748535</updated>
+      <workItem from="1563891751515" duration="2693000" />
+      <workItem from="1563931539544" duration="31937000" />
+      <workItem from="1564015093680" duration="11612000" />
+      <workItem from="1564106573673" duration="7115000" />
+      <workItem from="1564623112337" duration="45000" />
+      <workItem from="1565055720050" duration="205000" />
+      <workItem from="1565055977718" duration="5682000" />
+      <workItem from="1566439125452" duration="4586000" />
+      <workItem from="1566452144481" duration="142000" />
+      <workItem from="1566477926303" duration="1854000" />
+      <workItem from="1566515484826" duration="2907000" />
+      <workItem from="1566518439002" duration="2503000" />
+      <workItem from="1566551274625" duration="2119000" />
+      <workItem from="1566608907132" duration="4211000" />
+      <workItem from="1566635348864" duration="1838000" />
+      <workItem from="1566946767498" duration="2147000" />
+      <workItem from="1566992065938" duration="3165000" />
+      <workItem from="1567041273230" duration="14385000" />
+      <workItem from="1567081441759" duration="6083000" />
+      <workItem from="1567090919955" duration="22846000" />
+      <workItem from="1567165254721" duration="12051000" />
+      <workItem from="1567214531228" duration="1642000" />
+      <workItem from="1567229942056" duration="15071000" />
+      <workItem from="1567263849157" duration="5909000" />
+      <workItem from="1567294654994" duration="782000" />
+      <workItem from="1567316781024" duration="23306000" />
+      <workItem from="1567404737347" duration="11816000" />
+      <workItem from="1567417379966" duration="2335000" />
+      <workItem from="1567468186408" duration="8278000" />
+      <workItem from="1567556212277" duration="2538000" />
+      <workItem from="1567737659612" duration="2572000" />
+      <workItem from="1567987214702" duration="4042000" />
+      <workItem from="1568076672437" duration="7439000" />
+      <workItem from="1568191074962" duration="2242000" />
+      <workItem from="1568257249148" duration="3970000" />
+      <workItem from="1568424254826" duration="7073000" />
+      <workItem from="1568536812382" duration="14353000" />
+      <workItem from="1568601439257" duration="21854000" />
+      <workItem from="1568646979548" duration="144000" />
+      <workItem from="1568647198070" duration="4605000" />
+      <workItem from="1568679315078" duration="3806000" />
+      <workItem from="1568685293645" duration="22110000" />
+      <workItem from="1568773818248" duration="27897000" />
+      <workItem from="1568861520455" duration="10665000" />
+      <workItem from="1568964766726" duration="17672000" />
+      <workItem from="1569053945548" duration="2000000" />
+      <workItem from="1570958957751" duration="6605000" />
+      <workItem from="1571227987071" duration="3490000" />
+      <workItem from="1575550644243" duration="779000" />
+      <workItem from="1575551695226" duration="253000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="498" y="256" key="Github.ShareDialog" timestamp="1575551946612">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="498" y="256" key="Github.ShareDialog/0.0.1280.720@0.0.1280.720" timestamp="1575551946612" />
+    <state x="358" y="69" key="Github.UntrackedFilesDialog" timestamp="1575551980063">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="358" y="69" key="Github.UntrackedFilesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575551980063" />
+    <state x="336" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1575551695589">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="336" y="188" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1575551695589" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ct/test.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="registerMapper" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mybatis_spring$MybatisSpringApplication.ic" NAME="MybatisSpringApplication Coverage Results" MODIFIED="1566517295874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

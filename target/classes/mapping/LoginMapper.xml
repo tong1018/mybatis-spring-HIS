@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ct.mapper.LoginMapper">
+
+<!--    //根据用户名获取用户密码-->
+<!--    public String getPassword(String username);-->
+
+    <select id="getUser" resultType="com.ct.entity.HisUser">
+        SELECT *
+        FROM hisuser hu
+        WHERE hu.username = #{username}
+    </select>
+
+
+
+
+
+</mapper>
