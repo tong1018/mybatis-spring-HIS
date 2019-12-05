@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52c5968-1668-4c7e-9bbf-0bf36979a7db" name="Default Changelist" comment="" />
+    <list default="true" id="b52c5968-1668-4c7e-9bbf-0bf36979a7db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +47,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1Q1n2qDXMmh1Q0nJnJXH4JV2OtU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -186,14 +190,30 @@
       <workItem from="1570958957751" duration="6605000" />
       <workItem from="1571227987071" duration="3490000" />
       <workItem from="1575550644243" duration="779000" />
-      <workItem from="1575551695226" duration="253000" />
+      <workItem from="1575551695226" duration="837000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1575552098777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575552098777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1575552097631">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1575552097631" />
     <state x="498" y="256" key="Github.ShareDialog" timestamp="1575551946612">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
