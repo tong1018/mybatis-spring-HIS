@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b52c5968-1668-4c7e-9bbf-0bf36979a7db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <workItem from="1570958957751" duration="6605000" />
       <workItem from="1571227987071" duration="3490000" />
       <workItem from="1575550644243" duration="779000" />
-      <workItem from="1575551695226" duration="837000" />
+      <workItem from="1575551695226" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1575552098777</created>
@@ -199,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575552098777</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change the version of fastjson">
+      <created>1575552596589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575552596589</updated>
+    </task>
+    <task id="LOCAL-00003" summary="change the version of fastjson">
+      <created>1575552684707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575552684707</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,13 +220,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="change the version of fastjson" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the version of fastjson" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1575552595327">
+    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1575552683991">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1575552595327" />
+    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1575552683991" />
     <state x="498" y="256" key="Github.ShareDialog" timestamp="1575551946612">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -222,6 +236,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="358" y="69" key="Github.UntrackedFilesDialog/0.0.1280.720@0.0.1280.720" timestamp="1575551980063" />
+    <state x="233" y="97" key="Vcs.Push.Dialog.v2" timestamp="1575552739613">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1575552739613" />
     <state x="336" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1575551695589">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
